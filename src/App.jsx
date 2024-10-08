@@ -16,11 +16,11 @@ function app(){
      }
 
 
-  return <div>
-    <h1> THE NUMBER IS {a}</h1>
-    <button onClick={abc}> INCREMENT</button>
-    <br /> <br />
-    <button onClick={efg}> DECREMENT</button>
+  return <div className="flex flex-col gap-2 p-4 justify-center items-center">
+    <h1 className="font-black  font-mono  text-4xl" > THE NUMBER IS {a}</h1>
+    <button onClick={abc} className="bg-green-500 p-4 rounded xl"> INCREMENT</button>
+    <br /> 
+    <button onClick={efg} className="bg-green-500 p-4 rounded xl"> DECREMENT</button>
   </div>
 
 
