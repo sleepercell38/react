@@ -9,15 +9,56 @@
 
 
 import React from 'react'
-import Navbar from './components/Navbar'
-import Footer from './components/Footer'
+import Card from './components/Card'
+
+
 
 const using_components = () => {
+
+  const data=[
+    {
+      "name": "Alice Smith",
+      "place": "Los Angeles",
+      "age": 28,
+      "profession": "Graphic Designer"
+    },
+    {
+      "name": "Michael Johnson",
+      "place": "Chicago",
+      "age": 35,
+      "profession": "Data Analyst"
+    },
+    {
+      "name": "Sophia Lee",
+      "place": "San Francisco",
+      "age": 26,
+      "profession": "Frontend Developer"
+    },
+    {
+      "name": "David Brown",
+      "place": "Houston",
+      "age": 40,
+      "profession": "Project Manager"
+    },
+    {
+      "name": "Emma Wilson",
+      "place": "Seattle",
+      "age": 22,
+      "profession": "UI/UX Designer"
+    }
+  ]
+
+
   return (
-    <>
-     <Navbar/>
-     <Footer/>
-    </>
+    
+    <div className='flex flex-wrap justify-center mt-10 gap-20 m-10'>
+      {data.map((elem)=>{
+         return <Card username={elem.name}  age= {elem.age} work = {elem.profession}/>;
+      })}
+       
+    
+    </div>
+    
   )
 }
 
